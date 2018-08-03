@@ -1,12 +1,22 @@
 <mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="newbies.controller.welcome" displayBlock="true">
 	<App>
-		<pages>
-			<Page title="{i18n>title}">
+		<pages><Page title="{i18n>title}">
 				<content>
 					
-					<Button text="Show my name" width="100px" id="__button0" press="doShowMyName"/>
+					<VBox width="100%" direction="Column" id="__vbox0">
+					    <items>
+					        <Button xmlns="sap.m" text="Show my name" width="100px" press="doShowMyName"/>
+					        <Text xmlns="sap.m" text="{user>/firstName}" id="__text4"/>
+					    </items>
+					</VBox>
 					
-					<Text text="{/firstName}" id="__text4"/>
+					<VBox width="100%" direction="Column" id="__vbox1">
+					    <items>
+					        <Input xmlns="sap.m" value="{w>/city}" width="50%"/>
+					        <Button xmlns="sap.m" text="Show city info" width="100px" press="getCityDetail"/>
+					        <Text xmlns="sap.m" text="{w>/weather}"/>
+					    </items>
+					</VBox>
 				</content>
 			</Page>
 		</pages>

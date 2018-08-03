@@ -25,6 +25,13 @@
     		"type": "service",
     		"name": "userapi"
     	}
+    },
+	{
+    	"path": "/services/weather",
+    	"target": {
+    		"type": "destination",
+    		"name": "openweather"
+    	}
     }    
   ],
   "sendWelcomeFileRedirect": true
